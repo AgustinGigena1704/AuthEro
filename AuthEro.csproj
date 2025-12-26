@@ -13,6 +13,11 @@
 		<PackageTags>authentication;jwt;firebase;login;register</PackageTags>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<Title>AuthEro</Title>
+		<RepositoryUrl>https://github.com/AgustinGigena1704/AuthEro</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<NeutralLanguage>es-AR</NeutralLanguage>
+		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
 	</PropertyGroup>
 
 	<ItemGroup>
