@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AuthEro.Services
 {
-    internal class FireBaseService
+    public class FireBaseService
     {
     }
 }

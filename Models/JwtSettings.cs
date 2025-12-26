@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AuthEro.Models
 {
-    internal class JwtSettings
+    public class JwtSettings
     {
     }
 }
