@@ -1,0 +1,27 @@
+name: Roslyn Analysis
+
+on: pull_request
+
+jobs:
+  analyze:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore
+        run: dotnet restore
+
+      - name: Build with SARIF
+        run: |
+          dotnet build --no-restore --configuration Release \
+            -p:AnalysisLevel=latest-all \
+            -p:EnableNETAnalyzers=true \
+            -p:ErrorLog=${{ github.workspace }}/roslyn.sarif
+
+      - name: Upload SARIF
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: ${{ github.workspace }}/roslyn.sarif   
