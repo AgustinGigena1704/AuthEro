@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AuthEro.Interfaces
 {
-    internal interface IAuthService
+    public interface IAuthService
     {
     }
 }

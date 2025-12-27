@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AuthEro.Models
 {
-    internal class AuthResult
+    public class AuthResult
     {
     }
 }
